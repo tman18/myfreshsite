@@ -24,6 +24,12 @@ Resume
             <li>Sublime / VS Code</li>
             <li>Mac / PC</li>
           </ul>
+        <h3>Github Repos</h3>
+        <ul>
+        {% for repo in repos %}
+        <li><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></li>
+        {% endfor %}
+        </ul>  
         <h3>Education</h3>
         <p>California State University, East Bay (2015)<br />
           <span style="padding-left: 10px;">B.A. Psychology and Minor Statistics</span>  

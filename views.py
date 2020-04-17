@@ -17,8 +17,12 @@ def about_me(request):
     return render(request, "content/about-me.html", context)
 
 def resume(request):
+    response = requests.get('https://api.github.com/users/tman18/repos')
+    repos = response.json()
     context = {
-        'request': request
+        'request': request,
+        'response': response,
+        'repos': repos,
     }
     return render(request, "content/resume.html", context)
 
